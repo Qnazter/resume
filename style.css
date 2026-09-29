@@ -1,0 +1,265 @@
+:root {
+  --bs-body-font-family: "IBM Plex Mono", system-ui, sans-serif;
+  --accent: #4f46e5;
+  --line: #e5e7eb;
+}
+[data-bs-theme="dark"] {
+  --accent: #818cf8;
+  --line: #2a2f45;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+.container {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.navbar {
+  border-bottom: 1px solid var(--line);
+  background: var(--bs-body-bg);
+}
+.navbar-logo {
+  font-weight: 800;
+}
+.nav-link:hover {
+  color: var(--accent);
+}
+
+.hero {
+  padding: 5rem 0 3rem;
+}
+.hero h1 {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+}
+.typing-cursor::after {
+  content: "|";
+  color: var(--accent);
+  animation: cursor-blink 0.8s steps(1) infinite;
+}
+@keyframes cursor-blink {
+  50% {
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .typing-cursor::after {
+    animation: none;
+  }
+}
+.role {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.btn-accent {
+  --bs-btn-bg: var(--accent);
+  --bs-btn-border-color: var(--accent);
+  --bs-btn-color: #fff;
+  --bs-btn-hover-bg: var(--accent);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-border-color: var(--accent);
+  font-weight: 600;
+}
+.btn-line {
+  border: 1px solid var(--line);
+  font-weight: 600;
+}
+.btn-line:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.section {
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--line);
+}
+.section-title {
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.entry + .entry {
+  margin-top: 2rem;
+}
+.entry-date {
+  font-size: 0.85rem;
+  color: var(--bs-secondary-color);
+}
+.entry-company {
+  color: var(--accent);
+  font-weight: 600;
+}
+.entry ul {
+  padding-left: 1.1rem;
+  color: var(--bs-secondary-color);
+}
+
+.chip {
+  display: inline-block;
+  padding: 0.25rem 0.7rem;
+  margin: 0 0.3rem 0.4rem 0;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+}
+footer a {
+  color: var(--bs-secondary-color);
+  text-decoration: none;
+}
+footer a:hover {
+  color: var(--accent);
+}
+.theme-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: transparent;
+}
+
+:root {
+  --tint: #eef0ff;
+  --surface: #fff;
+}
+[data-bs-theme="dark"] {
+  --tint: #1e2140;
+  --surface: #161a2e;
+}
+.section-title {
+  display: inline-block;
+  padding-bottom: 0.4rem;
+  border-bottom: 3px solid var(--accent);
+}
+.role {
+  letter-spacing: 0.01em;
+}
+.timeline {
+  border-left: 2px solid var(--line);
+  padding-left: 1.5rem;
+}
+.entry {
+  position: relative;
+}
+.entry::before {
+  content: "";
+  position: absolute;
+  left: calc(-1.5rem - 6px);
+  top: 0.35rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.entry-card,
+.skill-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.25rem 1.4rem;
+}
+.card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+.card-link:hover {
+  color: inherit;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+.card-link:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+.entry-card {
+  transition: border-color 0.2s;
+}
+.entry-card:hover {
+  border-color: var(--accent);
+}
+.chip {
+  background: var(--tint);
+  border-color: transparent;
+  color: var(--accent);
+  font-weight: 600;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.chip:hover {
+  background: var(--accent);
+  color: #fff;
+}
+.contact-box {
+  background: var(--tint);
+  border-radius: 16px;
+  padding: 3rem 1.5rem;
+}
+
+[data-bs-theme="dark"] {
+  --bs-body-bg: #0a0908;
+  --bs-body-color: #f3e9dc;
+  --bs-emphasis-color: #fff6ea;
+  --bs-secondary-color: #a89b8c;
+  --bs-border-color: #2a2420;
+  --accent: #f59e0b;
+  --on-accent: #0a0908;
+  --line: #2a2420;
+  --tint: #1c1610;
+  --surface: #141210;
+}
+[data-bs-theme="light"] {
+  --bs-body-bg: #faf5ee;
+  --bs-body-color: #2b211a;
+  --bs-emphasis-color: #1a120c;
+  --bs-secondary-color: #7a6a5b;
+  --bs-border-color: #eadfd0;
+  --accent: #c2410c;
+  --on-accent: #fff;
+  --line: #eadfd0;
+  --tint: #fbeedd;
+  --surface: #fffdf9;
+}
+.btn-accent {
+  --bs-btn-color: var(--on-accent);
+  --bs-btn-hover-color: var(--on-accent);
+  --bs-btn-hover-bg: var(--accent);
+  --bs-btn-active-bg: var(--accent);
+  --bs-btn-active-color: var(--on-accent);
+  --bs-btn-active-border-color: var(--accent);
+}
+.btn-accent:hover {
+  filter: brightness(1.1);
+}
+.chip:hover {
+  color: var(--on-accent);
+}
+.entry::before {
+  box-shadow: 0 0 0 4px var(--bs-body-bg);
+}
+.navbar {
+  background: color-mix(in srgb, var(--bs-body-bg) 92%, transparent);
+  backdrop-filter: blur(10px);
+}
+.entry-card:hover {
+  box-shadow: 0 0 0 1px var(--accent);
+}
